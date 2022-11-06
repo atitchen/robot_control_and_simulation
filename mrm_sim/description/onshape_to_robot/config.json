@@ -1,0 +1,12 @@
+{
+    "documentId": "7467964319e0265ba8f765e0",
+    "assemblyName": "arm_assembly",
+    "outputFormat": "urdf",
+    "packageName": "mrm_sim/description/meshes",
+    "useScads": true,
+    "simplifySTLs": "all",
+    "jointMaxEffort": {
+        "default": 50
+    },
+    "jointMaxVelocity": 6.2832
+}

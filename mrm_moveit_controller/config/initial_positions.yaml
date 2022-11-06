@@ -1,0 +1,13 @@
+# Default initial positions for mrm_001's ros2_control fake system
+
+initial_positions:
+  revolute_elbow: 0
+  revolute_finger_1a: 0
+  revolute_finger_2a: 0
+  revolute_finger_3a: 0
+  revolute_forearm: 0
+  revolute_shoulder_1: 0
+  revolute_shoulder_2: 0
+  revolute_thumb: 0
+  revolute_upper: 0
+  revolute_wrist: 0

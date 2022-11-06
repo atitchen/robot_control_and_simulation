@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
+
+  <xacro:arg name="namespace" default=""/>
+
+  <xacro:include filename="$(find robot_arm_description)/description/xacro/macro.robot_arm_onshape.xacro" />
+
+  <xacro:robot namespace="$(arg namespace)"/>
+
+  <!-- World fixed joint
+  <link name="world" />
+  <joint name="world_fixed" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base"/>
+  </joint> -->
+
+</robot>
+
+      

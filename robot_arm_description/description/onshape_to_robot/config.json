@@ -1,0 +1,12 @@
+{
+    "documentId": "4284b6bb232d635c93242dd8",
+    "assemblyName": "robot_arm_2_assembly",
+    "outputFormat": "urdf",
+    "packageName": "robot_arm_description/description/meshes",
+    "useScads": true,
+    "simplifySTLs": "all",
+    "jointMaxEffort": {
+        "default": 50
+    },
+    "jointMaxVelocity": 6.2832
+}

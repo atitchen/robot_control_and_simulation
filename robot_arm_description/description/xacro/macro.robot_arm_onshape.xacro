@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+
+<robot name="robot"
+	xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+	<xacro:include filename="$(find robot_arm_description)/description/xacro/macro.gazebo_config_control.xacro" />
+	<xacro:include filename="$(find robot_arm_description)/description/xacro/macro.transmission.xacro" />
+	<xacro:include filename="$(find robot_arm_description)/description/xacro/macro.internal_config.xacro" /> 
+
+
+	<xacro:macro name="robot" params="namespace">
+
+
+
+		<link name="base_0">
+			<visual>
+				<origin xyz="0.0135299 -0.0318221 0.0270018" rpy="0 -0 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/base_0.stl"/>
+				</geometry>
+				<material name="base_0_material">
+					<color rgba="0.901961 0.901961 0.901961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="0.0135299 -0.0318221 0.0270018" rpy="0 -0 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/base_0.stl"/>
+				</geometry>
+				<material name="base_0_material">
+					<color rgba="0.901961 0.901961 0.901961 1.0"/>
+				</material>
+			</collision>
+			<!-- <inertial>
+				<origin xyz="0.0135299 -0.0318221 0.0385116" rpy="0 0 0"/>
+				<mass value="13.6949" />
+				<inertia ixx="0.0792427" ixy="0" ixz="0" iyy="0.0792427" iyz="0" izz="0.15407" />
+			</inertial> -->
+		</link>
+
+		<link name="link_1">
+			<visual>
+				<origin xyz="0 0 0" rpy="3.14159 -0 -5.77867e-49" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_1.stl"/>
+				</geometry>
+				<material name="link_1_material">
+					<color rgba="0.301961 0.301961 0.301961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="0 0 0" rpy="3.14159 -0 -5.77867e-49" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_1.stl"/>
+				</geometry>
+				<material name="link_1_material">
+					<color rgba="0.301961 0.301961 0.301961 1.0"/>
+				</material>
+			</collision>
+			<inertial>
+				<origin xyz="-1.88384e-18 -0.000520977 -0.0180037" rpy="0 0 0"/>
+				<mass value="0.2" />
+				<inertia ixx="0.000114447" ixy="1.23221e-52" ixz="-4.0085e-55" iyy="9.87873e-05" iyz="-6.93671e-07" izz="0.00015658" />
+			</inertial>
+		</link>
+
+		<link name="link_2">
+			<visual>
+				<origin xyz="-2.77556e-17 0 -0.005" rpy="-1.43177e-38 2.39057e-16 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_2.stl"/>
+				</geometry>
+				<material name="link_2_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="-2.77556e-17 0 -0.005" rpy="-1.43177e-38 2.39057e-16 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_2.stl"/>
+				</geometry>
+				<material name="link_2_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</collision>
+			<inertial>
+				<origin xyz="-0.0725 -3.17134e-18 0.03" rpy="0 0 0"/>
+				<mass value="0.2" />
+				<inertia ixx="4.95322e-05" ixy="3.15164e-58" ixz="-1.01712e-20" iyy="0.000136375" iyz="-3.38465e-37" izz="9.20791e-05" />
+			</inertial>
+		</link>
+
+		<link name="link_3">
+			<visual>
+				<origin xyz="-0.02 0.015 -0.06" rpy="1.5708 -0 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_3.stl"/>
+				</geometry>
+				<material name="link_3_material">
+					<color rgba="0.301961 0.301961 0.301961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="-0.02 0.015 -0.06" rpy="1.5708 -0 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_3.stl"/>
+				</geometry>
+				<material name="link_3_material">
+					<color rgba="0.301961 0.301961 0.301961 1.0"/>
+				</material>
+			</collision>
+			<inertial>
+				<origin xyz="-0.00170607 8.67362e-18 -0.03" rpy="0 0 0"/>
+				<mass value="0.2" />
+				<inertia ixx="5.55698e-05" ixy="0" ixz="0" iyy="0.000250889" iyz="6.69747e-42" izz="0.000218218" />
+			</inertial>
+		</link>
+
+		<link name="link_4">
+			<visual>
+				<origin xyz="0 5.55112e-17 -0.005" rpy="-1.5708 -1.99704e-32 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_4.stl"/>
+				</geometry>
+				<material name="link_4_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="0 5.55112e-17 -0.005" rpy="-1.5708 -1.99704e-32 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_4.stl"/>
+				</geometry>
+				<material name="link_4_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</collision>
+			<inertial>
+				<origin xyz="-2.06547e-17 0.0297296 0.02" rpy="0 0 0"/>
+				<mass value="0.1" />
+				<inertia ixx="1.70662e-05" ixy="-7.56006e-37" ixz="0" iyy="9.75081e-06" iyz="0" izz="9.50338e-06" />
+			</inertial>
+		</link>
+
+		<link name="link_5">
+			<visual>
+				<origin xyz="0 0.0125 -0.02" rpy="0 -0 2.32145e-30" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_5.stl"/>
+				</geometry>
+				<material name="link_5_material">
+					<color rgba="0.301961 0.301961 0.301961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="0 0.0125 -0.02" rpy="0 -0 2.32145e-30" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/link_5.stl"/>
+				</geometry>
+				<material name="link_5_material">
+					<color rgba="0.301961 0.301961 0.301961 1.0"/>
+				</material>
+			</collision>
+			<inertial>
+				<origin xyz="-4.06527e-05 3.46945e-18 -0.0137723" rpy="0 0 0"/>
+				<mass value="0.1" />
+				<inertia ixx="2.46126e-06" ixy="1.37539e-35" ixz="-1.32604e-08" iyy="3.46344e-06" iyz="-3.07833e-38" izz="2.06606e-06" />
+			</inertial>
+		</link>
+
+		<link name="gripper">
+			<visual>
+				<origin xyz="-3.46945e-18 0 0.0175" rpy="3.14159 1.36678e-30 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/gripper.stl"/>
+				</geometry>
+				<material name="gripper_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="-3.46945e-18 0 0.0175" rpy="3.14159 1.36678e-30 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/gripper.stl"/>
+				</geometry>
+				<material name="gripper_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</collision>
+			<inertial>
+				<origin xyz="0.0157231 -0.021422 0.00500002" rpy="0 0 0"/>
+				<mass value="0.1" />
+				<inertia ixx="6.7702e-06" ixy="4.37184e-07" ixz="-2.64266e-11" iyy="2.12396e-06" iyz="1.60637e-13" izz="7.41346e-06" />
+			</inertial>
+		</link>
+
+		<joint name="revolute_6" type="revolute">
+			<origin xyz="0.0125 0.005 -0.02" rpy="1.5708 -1.41924e-13 2.66103e-29" />
+			<parent link="link_5" />
+			<child link="gripper" />
+			<axis xyz="0 0 1"/>
+			<limit effort="2" velocity="1" lower="-0.349066" upper="0.349066"/>
+			<joint_properties friction="0.1"/>
+		</joint>
+
+		<link name="gripper_2">
+			<visual>
+				<origin xyz="-4.98733e-18 0 0.0175" rpy="3.14159 -8.71029e-17 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/gripper.stl"/>
+				</geometry>
+				<material name="gripper_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</visual>
+			<collision>
+				<origin xyz="-4.98733e-18 0 0.0175" rpy="3.14159 -8.71029e-17 0" />
+				<geometry>
+					<mesh filename="file:///$(find robot_arm_description)/description/meshes/gripper.stl"/>
+				</geometry>
+				<material name="gripper_material">
+					<color rgba="0.701961 0.701961 0.701961 1.0"/>
+				</material>
+			</collision>
+			<inertial>
+				<origin xyz="0.0157231 -0.021422 0.00500002" rpy="0 0 0"/>
+				<mass value="0.1" />
+				<inertia ixx="6.7702e-06" ixy="4.37184e-07" ixz="-2.64266e-11" iyy="2.12396e-06" iyz="1.60637e-13" izz="7.41346e-06" />
+			</inertial>
+		</link>
+
+		<joint name="revolute_7" type="revolute">
+			<origin xyz="-0.0125 -0.005 -0.02" rpy="1.5708 1.39607e-13 -3.14159" />
+			<parent link="link_5" />
+			<child link="gripper_2" />
+			<axis xyz="0 0 1"/>
+			<limit effort="2" velocity="1" lower="-0.349066" upper="0.349066"/>
+			<joint_properties friction="0.1"/>
+		</joint>
+
+		<joint name="revolute_5" type="revolute">
+			<origin xyz="-4.16334e-17 0.055 0.02" rpy="1.5708 1.5708 0" />
+			<parent link="link_4" />
+			<child link="link_5" />
+			<axis xyz="0 0 1"/>
+			<limit effort="5" velocity="1" lower="-3.14159" upper="3.14159"/>
+			<joint_properties friction="0.1"/>
+		</joint>
+
+		<joint name="revolute_4" type="revolute">
+			<origin xyz="-0.07 6.93889e-18 -0.05" rpy="1.26057e-16 4.44089e-16 1.5708" />
+			<parent link="link_3" />
+			<child link="link_4" />
+			<axis xyz="0 0 1"/>
+			<limit effort="5" velocity="1" lower="-2.26893" upper="2.26893"/>
+			<joint_properties friction="0.1"/>
+		</joint>
+
+		<joint name="revolute_3" type="revolute">
+			<origin xyz="-0.145 -4.85723e-17 7.63278e-17" rpy="3.14159 -3.80802e-28 -6.66134e-16" />
+			<parent link="link_2" />
+			<child link="link_3" />
+			<axis xyz="0 0 1"/>
+			<limit effort="5" velocity="1" lower="-2.26893" upper="2.26893"/>
+			<joint_properties friction="0.1"/>
+		</joint>
+
+		<joint name="revolute_2" type="revolute">
+			<origin xyz="-0.03 0.02 -0.025" rpy="-3.14159 -1.5708 0" />
+			<parent link="link_1" />
+			<child link="link_2" />
+			<axis xyz="0 0 1"/>
+			<limit effort="5" velocity="1" lower="-1.5708" upper="1.5708"/>
+			<joint_properties friction="0.1"/>
+		</joint>
+
+		<joint name="revolute_1" type="revolute">
+			<origin xyz="0.0135299 -0.0318221 0.0770018" rpy="3.14159 -5.97628e-25 1.57772e-30" />
+			<parent link="base_0" />
+			<child link="link_1" />
+			<axis xyz="0 0 1"/>
+			<limit effort="5" velocity="1" lower="-6.28319" upper="6.28319"/>
+			<joint_properties friction="0.1"/>
+		</joint>
+
+
+		<xacro:config_ctr_gazebo />
+		<xacro:dsr_transmission />
+		<xacro:dsr_config_coeff />
+
+	</xacro:macro>
+
+</robot>
